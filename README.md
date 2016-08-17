@@ -38,7 +38,6 @@ add ```window.cordova.plugins &&` to the run block, so your full run block in yo
 ```npm init -y
 ```
 
-
 Knowing that we are going to use ngCordova plugins, we're going to go ahead and add them now
 ```bower install ngCordova
 ```
@@ -50,6 +49,13 @@ In your app.js file add the ngCordova module as a dependencies to your app modul
 
 ```.module('app_name', ['ionic', 'ngCordova'])
 ```
+
+Add script tags for the cordova plugins you want to use (see [docs]() for .git addresses for other plugins):
+EmailComposer: cordova plugin add https://github.com/katzer/cordova-plugin-email-composer.git
+
+
+We're going to use EmailComposer and X because they are a good combination for a basic app and EmailComposer requires us to test on a device.
+
 Setup git
 ```git init
 touch .gitignore
@@ -59,11 +65,7 @@ Go make a repo from your github account
 ``
 ``git push -u origin master
 ``
-Add script tags for the cordova plugins you want to use (see [docs]() for .git addresses for other plugins):
-EmailComposer: cordova plugin add https://github.com/katzer/cordova-plugin-email-composer.git
 
-
-We're going to use EmailComposer and X because they are a good combination for a basic app and EmailComposer requires us to test on a device.
 
 
 **Bonus - Using Ionic Modal**
