@@ -46,13 +46,25 @@ Knowing that we are going to use ngCordova plugins, we're going to go ahead and 
 ```<script src="lib/ngCordova/dist/ng-cordova.js"></script>
 ```
 
-In your app.js file add the ionic and ngCordova modules as a dependencies to your app module:
+In your app.js file add the ngCordova module as a dependencies to your app module:
 
-```.module('app_name', ['ionic', 'ngCordova', 'angularMoment'])
+```.module('app_name', ['ionic', 'ngCordova'])
 ```
-Add script tags for the cordova plugins you want to use (see docs for .git addresses):
-SQLite: cordova plugin add https://github.com/litehelpers/Cordova-sqlite-storage.git
+Setup git
+```git init
+touch .gitignore
+```
+Go make a repo from your github account
+``git remote add origin [your repo address]
+``
+``git push -u origin master
+``
+Add script tags for the cordova plugins you want to use (see [docs]() for .git addresses for other plugins):
 EmailComposer: cordova plugin add https://github.com/katzer/cordova-plugin-email-composer.git
+
+
+We're going to use EmailComposer and X because they are a good combination for a basic app and EmailComposer requires us to test on a device.
+
 
 **Bonus - Using Ionic Modal**
 npm install ionic-modal-component
@@ -74,3 +86,5 @@ Add the module angularMoment as a dependency to your app module:
 
 <script src="components/moment/moment.js"></script>
 <script src="components/angular-moment/angular-moment.js"></script>
+
+SQLite: cordova plugin add https://github.com/litehelpers/Cordova-sqlite-storage.git
