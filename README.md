@@ -60,33 +60,32 @@ Setup git
 ```git init
 touch .gitignore
 ```
-Go make a repo from your github account
+Go make a repo from your github account, then
 ``git remote add origin [your repo address]
 ``
 ``git push -u origin master
 ``
-
-
 
 **Bonus - Using Ionic Modal**
 npm install ionic-modal-component
 + add script to index.html file
 <script src="dist/ionic-modal-component.js"></script>
 
-
 **Bonus - Manipulating Time Entry and Formatting**
-npm install moment --save #momentjs
+Moment.js
+npm install --save moment
 + add script to index.html file
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
 
-npm install angular-moment moment --save #angular-moment
+Angular-moment
+npm install angular-moment --save #angular-moment
 + add script to index.html file
 <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>
 
 Add the module angularMoment as a dependency to your app module:
 .module('app_name', ['ionic', 'ngCordova', 'angularMoment'])
 
-<script src="components/moment/moment.js"></script>
-<script src="components/angular-moment/angular-moment.js"></script>
+<!-- <script src="components/moment/moment.js"></script>
+<script src="components/angular-moment/angular-moment.js"></script> -->
 
 SQLite: cordova plugin add https://github.com/litehelpers/Cordova-sqlite-storage.git
